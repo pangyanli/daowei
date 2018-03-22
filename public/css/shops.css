@@ -1,0 +1,264 @@
+body {
+  max-width: 1600px;
+  min-width: 1400px;
+}
+body .server_shops {
+  width: 100%;
+  background: #FBF8F8;
+}
+body .server_shops .header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+body .server_shops .header .header_wrapper {
+  width: 90%;
+  height: 70px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+body .server_shops .header .header_wrapper .city > a {
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+}
+body .server_shops .header .header_wrapper .city > a.iconfont {
+  font-size: 22px;
+  color: #FF0000;
+  margin-right: -5px;
+}
+body .server_shops .header .header_wrapper .city > a.tab_city:hover {
+  color: #e94840;
+}
+body .server_shops .header .header_wrapper .nav_list > a {
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+body .server_shops .header .header_wrapper .nav_list > a:hover {
+  color: #e94840;
+}
+body .server_shops .header .header_wrapper .nav_list > a.on {
+  color: #e94840;
+}
+body .server_shops .header .header_wrapper .nav_list > a.shop_login {
+  color: #ffffff;
+  background: red;
+  border-radius: 5px;
+  padding: 5px 5px;
+}
+body .server_shops .content_wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+body .server_shops .content_wrapper .shops_title {
+  width: 100%;
+  line-height: 85px;
+  font-size: 18px;
+  font-weight: bold;
+}
+body .server_shops .content_wrapper .content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+body .server_shops .content_wrapper .content .left_content {
+  width: 80%;
+  margin-right: 12px;
+}
+body .server_shops .content_wrapper .content .left_content .service_list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  justify-content: space-between;
+}
+body .server_shops .content_wrapper .content .left_content .service_list .server_item {
+  width: 24%;
+  border: 1px solid #eaeaea;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  box-sizing: border-box;
+}
+body .server_shops .content_wrapper .content .left_content .service_list .server_item a {
+  width: 100%;
+  display: block;
+}
+body .server_shops .content_wrapper .content .left_content .service_list .server_item a > img {
+  display: block;
+  width: 100%;
+}
+body .server_shops .content_wrapper .content .left_content .service_list .server_item a .server_name {
+  font-size: 16px;
+  margin: 10px 0;
+  color: black;
+  line-height: 20px;
+}
+body .server_shops .content_wrapper .content .left_content .service_list .server_item a .server_name .iconfont {
+  font-size: 25px;
+}
+body .server_shops .content_wrapper .content .left_content .service_list .server_item a .server_name .name {
+  font-weight: 700;
+}
+body .server_shops .content_wrapper .content .left_content .service_list .server_item a .count_rating {
+  font-size: 12px;
+  color: #929292;
+  display: flex;
+  justify-content: space-between;
+  line-height: 20px;
+}
+body .server_shops .content_wrapper .content .right_content {
+  width: 20%;
+}
+body .server_shops .content_wrapper .content .right_content .jiameng {
+  width: 100%;
+}
+body .server_shops .content_wrapper .content .right_content .jiameng .shop_join {
+  width: 100%;
+}
+body .server_shops .content_wrapper .content .right_content .jiameng .shop_join > a {
+  width: 100%;
+  display: block;
+}
+body .server_shops .content_wrapper .content .right_content .jiameng .shop_join > a > img {
+  width: 230px;
+  height: 314px;
+  display: block;
+}
+body .server_shops .content_wrapper .content .right_content .jiameng .shop_avatar {
+  margin-top: 10px;
+  width: 100%;
+}
+body .server_shops .content_wrapper .content .right_content .jiameng .shop_avatar > a {
+  width: 100%;
+  display: block;
+}
+body .server_shops .content_wrapper .content .right_content .jiameng .shop_avatar > a .item_container {
+  position: relative;
+  width: 230px;
+  height: 300px;
+  background: url("../shops_images/tuijianfuwushang_06.jpg") center center no-repeat;
+}
+body .server_shops .content_wrapper .content .right_content .jiameng .shop_avatar > a .item_container > img {
+  width: 130px;
+  height: 130px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-65px, -100px);
+}
+body .server_shops .content_wrapper .btn {
+  width: 80%;
+  text-align: center;
+}
+body .server_shops .content_wrapper .btn > span {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  margin: 50px 5px;
+  background: #fff;
+  display: inline-block;
+  font-size: 16px;
+  color: #b1b1b1;
+}
+body .server_shops .content_wrapper .btn > span .iconfont {
+  font-weight: bold;
+}
+body .server_shops .dapwei_footer {
+  width: 100%;
+  background: #fff;
+}
+body .server_shops .dapwei_footer .baozhang {
+  width: 100%;
+  text-align: center;
+  padding-top: 60px;
+}
+body .server_shops .dapwei_footer .baozhang > h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 20px 0 10px 0 ;
+}
+body .server_shops .dapwei_footer .baozhang > h2 > span {
+  color: #fb474f;
+  font-weight: 900;
+}
+body .server_shops .dapwei_footer .baozhang > p {
+  margin-top: 15px;
+  font-size: 22px;
+}
+body .server_shops .dapwei_footer .pass_server {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+body .server_shops .dapwei_footer .pass_server > ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+}
+body .server_shops .dapwei_footer .pass_server > ul > li {
+  font-size: 18px;
+  color: #1d1515;
+  margin: 0 15px;
+}
+body .server_shops .dapwei_footer .pass_server > ul > li .iconfont {
+  font-size: 22px;
+  color: #008000;
+  font-weight: bold;
+}
+body .server_shops .dapwei_footer .remen_city {
+  width: 100%;
+  padding: 50px 0 20px 0;
+}
+body .server_shops .dapwei_footer .remen_city > ul {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+body .server_shops .dapwei_footer .remen_city > ul .title {
+  width: 10%;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+}
+body .server_shops .dapwei_footer .remen_city > ul .city_name {
+  text-align: right;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+body .server_shops .dapwei_footer .remen_city > ul .city_name a {
+  width: 8%;
+  margin: 0 5px 15px 5px;
+  font-size: 16px;
+  color: #898989;
+  display: block;
+  font-weight: 200;
+  text-align: center;
+}
+body .server_shops .copy_container {
+  width: 100%;
+  background: #FBF8F8;
+  line-height: 50px;
+}
+body .server_shops .copy_container .copy {
+  margin: 0 auto;
+  width: 90%;
+  color: #898989;
+  font-size: 16px;
+}

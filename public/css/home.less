@@ -1,0 +1,384 @@
+body{
+  min-width: 1400px;
+  max-width: 1600px;
+  .daowei{
+    width: 100%;
+    height: 100%;
+    //头部样式
+    .header{
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      .header_wrapper{
+        width: 90%;
+        height: 70px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        white-space: nowrap;
+        .city{
+          >a{
+            color: #000;
+            font-size: 16px;
+            font-weight: bold;
+            &.iconfont{
+              font-size: 22px;
+              color: #FF0000;
+              margin-right: -5px;
+            }
+            &.tab_city:hover{
+              color:  #e94840;
+            }
+          }
+        }
+        .nav_list{
+          >a {
+            color: #000;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 10px;
+            &:hover{
+              color:  #e94840;
+            }
+            &.on{
+              color:  #e94840;
+            }
+            &.shop_login{
+              color: #ffffff;
+              background: red;
+              border-radius: 5px;
+              padding: 5px 5px;
+            }
+          }
+        }
+      }
+    }
+    // 轮播样式
+    .banner_wrapper{
+      width: 100%;
+      position: relative;
+      .swiper-container{
+        width: 100%;
+        height: 420px;
+        .swiper-wrapper{
+          width: 100%;
+          height: 100%;
+          .swiper-slide{
+            width: 100%;
+            height: 100%;
+            .banner_bd{
+              width: 100%;
+              height: 100%;
+              &.bd1{
+                background: url('../images_msite/banner1.jpg') center center no-repeat;
+              }
+              &.bd2{
+                background: url('../images_msite/banner2.jpg') center center no-repeat;
+              }
+              &.bd3{
+                background: url('../images_msite/banner3.jpg') center center no-repeat;
+              }
+            }
+          }
+        }
+        .swiper-pagination{
+          >span.swiper-pagination-bullet-active{
+            background: #02a774;
+          }
+        }
+
+
+      }
+      //二级菜单
+      .banner_nav{
+        height: 100%;
+        width: 180px;
+        background: #757881;
+        position: absolute;
+        top: 0;
+        left: 7%;
+        z-index: 100;
+        .nav_wrap{  // 外层ul
+          height: 100%;
+          width: 100%;
+          .nav_list{
+            width: 100%;
+            height: 42px;
+            line-height: 42px;
+            color: #fff;
+            text-align: center;
+            &:hover{
+              background:darkslategray;
+            }
+            >a{
+              display: block;
+              width: 100%;
+              height: 100%;
+              position: relative;
+              >span{
+                color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+                margin: 0 10px;
+                &.iconfont{
+                  font-size: 18px;
+                }
+              }
+            }
+            .on{
+              position: absolute;
+              top: 5px;
+              right: -4px;
+              color: #fff;
+            }
+            .nav_content{  // 内层ul
+              display: none;
+              width: 95%;
+              height: 420px;
+              position: absolute;
+              background: rgba(255, 255, 255, .8);
+              top: 0;
+              left: 180px;
+              z-index: 100;
+              color: #000;
+              .nav_item{
+                width: 100%;
+                height: 42px;
+                line-height: 42px;
+                font-size: 16px;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+    // 1、家庭保洁
+    .box_container{
+      width: 100%;
+      &:nth-child(2n){
+        background: #FBF8F8;
+      }
+      .box1{
+        width: 100%;
+        padding-bottom: 20px;
+        .family_container{
+          width: 90%;
+          margin: 0 auto;
+          padding-top: 50px;
+          .navigation{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .service_title{
+              width: 100%;
+              text-align: center;
+              color: #3d3838;
+              font-weight: 800;
+              font-size: 28px;
+            }
+            .service_content{
+              width: 100%;
+              font-size: 22px;
+              margin-top: 15px;
+              display: flex;
+              justify-content: space-between;
+              white-space: nowrap;
+              .service_list{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                >a{
+                  margin: 0 5px;
+                  color: #3d3838;
+                }
+              }
+            }
+          }
+          .service_type{
+            width: 100%;
+            margin-top: 25px;
+            display: flex;
+            .server_item{
+              width: 20%;
+              >a{
+                .item_container{
+                  box-sizing: border-box;
+                  padding: 10px;
+                  border: 1px solid #eaeaea;
+                  margin:0 5px;
+                  background: #fff;
+                  cursor: pointer;
+                  >img{
+                    width: 100%;
+                  }
+                  .server_name{
+                    width: 100%;
+                    font-size: 16px;
+                    padding: 5px 0;
+                    font-weight: 800;
+                    color: #000;
+                  }
+                  .description{
+                    color: #929292;
+                    padding: 5px 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    word-break: break-all;  // 允许在单词内换行
+                    font-size: 13px;
+                    line-height: 18px;
+                  }
+                  .price{
+                    height: 20px;
+                    font-size: 14px;
+                    padding: 10px 5px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    color: #fb474f;
+                    :nth-child(1){
+                      font-size: 20px;
+                      font-weight: 600;
+                    }
+                  }
+                  .btn{
+                    float: right;
+                    width: 76px;
+                    height: 24px;
+                    line-height: 24px;
+                    text-align: center;
+                    background: #fb474f;
+                    border-radius: 5px;
+                    color: #fff;
+                    font-size: 14px;
+                  }
+
+
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+    // 到位底部样式
+    .dapwei_footer{
+      width: 100%;
+      background: #fff;
+      .baozhang{
+        width: 100%;
+        text-align: center;
+        padding-top: 60px;
+        >h2{
+          font-size: 30px;
+          font-weight: 800;
+          margin: 20px 0 10px 0 ;
+          >span{
+            color: #fb474f;
+            font-weight: 900;
+          }
+        }
+        >p{
+          margin-top: 15px;
+          font-size: 22px;
+        }
+      }
+      .pass_server{
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        >ul{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          white-space: nowrap;
+          >li{
+            font-size: 18px;
+            color: #1d1515;
+            margin: 0 15px;
+            .iconfont{
+              font-size: 22px;
+              color: #008000;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      .remen_city{
+        width: 100%;
+        padding: 50px 0 20px 0;
+        >ul{
+          margin: 0 auto;
+          width: 90%;
+          display: flex;
+          justify-content: space-between;
+          .title{
+            width: 10%;
+            text-align: left;
+            font-size: 18px;
+            font-weight: 700;
+          }
+          .city_name{
+            text-align: right;
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            a>{
+              width: 8%;
+              margin: 0 5px 15px 5px;
+              font-size: 16px;
+              color: #898989;
+              display: block;
+              font-weight: 200;
+              text-align: center;
+            }
+          }
+        }
+      }
+      .partner{
+        width: 100%;
+        background: #FBF8F8;
+        padding-top: 30px;
+        .partner_title{
+          margin: 0 auto;
+          width: 90%;
+          text-align: left;
+          font-size: 18px;
+          font-weight: 700;
+        }
+        .shops{
+          margin: 20px auto;
+          width: 90%;
+          display: flex;
+          justify-content: space-between;
+          .shop_name{
+            width: 10%;
+            margin-right: 10px;
+            background: #fff;
+            box-sizing: border-box;
+            padding: 5px 5px;
+            a>{
+              display: block;
+              width: 100%;
+              >img{
+                width: 100%;
+                display: block;
+              }
+            }
+          }
+        }
+        .copy{
+          margin: 0 auto;
+          width: 90%;
+          color: #898989;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

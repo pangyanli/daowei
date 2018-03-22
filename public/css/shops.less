@@ -1,0 +1,273 @@
+body{
+  max-width: 1600px;
+  min-width: 1400px;
+  .server_shops{
+    width: 100%;
+    background: #FBF8F8;
+    //头部样式
+    .header{
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      .header_wrapper{
+        width: 90%;
+        height: 70px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        white-space: nowrap;
+        .city{
+          >a{
+            color: #000;
+            font-size: 16px;
+            font-weight: bold;
+            &.iconfont{
+              font-size: 22px;
+              color: #FF0000;
+              margin-right: -5px;
+            }
+            &.tab_city:hover{
+              color:  #e94840;
+            }
+          }
+        }
+        .nav_list{
+          >a {
+            color: #000;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 10px;
+            &:hover{
+              color:  #e94840;
+            }
+            &.on{
+              color:  #e94840;
+            }
+            &.shop_login{
+              color: #ffffff;
+              background: red;
+              border-radius: 5px;
+              padding: 5px 5px;
+            }
+          }
+        }
+      }
+    }
+    .content_wrapper{
+      width: 90%;
+      margin: 0 auto;
+      padding-bottom: 50px;
+      .shops_title{
+        width: 100%;
+        line-height: 85px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .content{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        .left_content{
+          width: 80%;
+          margin-right: 12px;
+          .service_list{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            white-space: nowrap;
+            justify-content:space-between;
+            .server_item{
+              width: 24%;
+              border: 1px solid #eaeaea;
+              padding: 10px;
+              margin-bottom: 10px;
+              background: #fff;
+              box-sizing: border-box;
+              a>{
+                width: 100%;
+                display: block;
+                >img{
+                  display: block;
+                  width: 100%;
+                }
+                .server_name{
+                  font-size: 16px;
+                  margin: 10px 0;
+                  color: black;
+                  line-height: 20px;
+                  .iconfont{
+                    font-size: 25px;
+                  }
+                  .name{
+                    font-weight: 700;
+                  }
+                }
+                .count_rating{
+                  font-size: 12px;
+                  color: #929292;
+                  display: flex;
+                  justify-content: space-between;
+                  line-height: 20px;
+                }
+              }
+
+            }
+          }
+        }
+        .right_content{
+          width: 20%;
+          .jiameng{
+            width: 100%;
+            .shop_join{
+              width: 100%;
+              >a{
+                width: 100%;
+                display: block;
+                >img{
+                  width: 230px;
+                  height: 314px;
+                  display: block;
+                }
+              }
+            }
+            .shop_avatar{
+              margin-top: 10px;
+              width: 100%;
+              >a{
+                width: 100%;
+                display: block;
+                .item_container{
+                  position: relative;
+                  width: 230px;
+                  height: 300px;
+                  background: url("../shops_images/tuijianfuwushang_06.jpg") center center no-repeat;
+                  >img{
+                    width: 130px;
+                    height: 130px;
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-65px,-100px);
+
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .btn{
+        width: 80%;
+        text-align: center;
+        >span{
+          width: 200px;
+          height: 50px;
+          line-height: 50px;
+          border: 1px solid #e5e5e5;
+          border-radius: 5px;
+          margin: 50px 5px;
+          background: #fff;
+          display: inline-block;
+          font-size: 16px;
+          color: #b1b1b1;
+          .iconfont{
+            font-weight: bold;
+          }
+        }
+
+      }
+    }
+    // 到位底部样式
+    .dapwei_footer{
+      width: 100%;
+      background: #fff;
+      .baozhang{
+        width: 100%;
+        text-align: center;
+        padding-top: 60px;
+        >h2{
+          font-size: 30px;
+          font-weight: 800;
+          margin: 20px 0 10px 0 ;
+          >span{
+            color: #fb474f;
+            font-weight: 900;
+          }
+        }
+        >p{
+          margin-top: 15px;
+          font-size: 22px;
+        }
+      }
+      .pass_server{
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        >ul{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          white-space: nowrap;
+          >li{
+            font-size: 18px;
+            color: #1d1515;
+            margin: 0 15px;
+            .iconfont{
+              font-size: 22px;
+              color: #008000;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      .remen_city{
+        width: 100%;
+        padding: 50px 0 20px 0;
+        >ul{
+          margin: 0 auto;
+          width: 90%;
+          display: flex;
+          justify-content: space-between;
+          .title{
+            width: 10%;
+            text-align: left;
+            font-size: 18px;
+            font-weight: 700;
+          }
+          .city_name{
+            text-align: right;
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            a>{
+              width: 8%;
+              margin: 0 5px 15px 5px;
+              font-size: 16px;
+              color: #898989;
+              display: block;
+              font-weight: 200;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    .copy_container{
+      width: 100%;
+      background: #FBF8F8;
+      line-height: 50px;
+      .copy{
+        margin: 0 auto;
+        width: 90%;
+        color: #898989;
+        font-size: 16px;
+      }
+    }
+  }
+}
