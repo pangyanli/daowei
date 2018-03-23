@@ -1,0 +1,337 @@
+body {
+  max-width: 1600px;
+  min-width: 1200px;
+  margin: 0 auto;
+}
+body .server_category {
+  width: 100%;
+  background: #FBF8F8;
+}
+body .server_category .header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+body .server_category .header .header_wrapper {
+  width: 90%;
+  height: 70px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+body .server_category .header .header_wrapper .city > a {
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+}
+body .server_category .header .header_wrapper .city > a.iconfont {
+  font-size: 22px;
+  color: #FF0000;
+  margin-right: -5px;
+}
+body .server_category .header .header_wrapper .city > a.tab_city:hover {
+  color: #e94840;
+}
+body .server_category .header .header_wrapper .nav_list > a {
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+body .server_category .header .header_wrapper .nav_list > a:hover {
+  color: #e94840;
+}
+body .server_category .header .header_wrapper .nav_list > a.on {
+  color: #e94840;
+}
+body .server_category .header .header_wrapper .nav_list > a.shop_login {
+  color: #ffffff;
+  background: red;
+  border-radius: 5px;
+  padding: 5px 5px;
+}
+body .server_category .header.ani {
+  animation-name: anima;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+@keyframes ani {
+  from {
+    transform: translateY(-100%) rotateX(90deg);
+  }
+  to {
+    transform: translateY(0) rotateX(0);
+  }
+}
+body .server_category .content_wrapper {
+  width: 90%;
+  margin: 0 auto;
+  color: #333;
+  display: flex;
+}
+body .server_category .content_wrapper .left_content {
+  margin: 25px 0 50px;
+  width: 80%;
+}
+body .server_category .content_wrapper .left_content .title_h2 {
+  margin: 25px 0;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+}
+body .server_category .content_wrapper .left_content .title_h2 .bright {
+  margin: 0 5px;
+}
+body .server_category .content_wrapper .left_content .title_h2 .categoryId {
+  color: #1d1515;
+  font-weight: 600;
+}
+body .server_category .content_wrapper .left_content .title_h2 .categoryId.on {
+  color: #fb474f;
+}
+body .server_category .content_wrapper .left_content .categoryName {
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+body .server_category .content_wrapper .left_content .categoryName .pic {
+  float: left;
+  width: 160px;
+  height: 160px;
+  border: 1px solid #e5e5e5;
+  margin: 30px;
+}
+body .server_category .content_wrapper .left_content .categoryName .spm {
+  float: left;
+  margin-top: 35px;
+  font-size: 18px;
+  color: #1d1515;
+  line-height: 42px;
+  height: 42px;
+  display: flex;
+  flex-direction: column;
+}
+body .server_category .content_wrapper .left_content .categoryName .spm .price {
+  font-size: 14px;
+}
+body .server_category .content_wrapper .left_content .categoryName .spm .price .numb {
+  color: #fb474f;
+  margin: 0 50px 0 10px;
+  font-weight: bold;
+}
+body .server_category .content_wrapper .left_content .categoryName .spm .price .numb > span {
+  font-size: 26px;
+  font-weight: 600;
+}
+body .server_category .content_wrapper .left_content .categoryName .spm .yishou {
+  font-size: 14px;
+}
+body .server_category .content_wrapper .left_content .categoryName .spm .yishou .yishou_count {
+  color: #fb474f;
+  margin-left: 10px;
+}
+body .server_category .content_wrapper .left_content .categoryName .erweima {
+  float: right;
+  margin: 30px 50px;
+  text-align: center;
+}
+body .server_category .content_wrapper .left_content .categoryName .erweima > span {
+  display: block;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 700;
+}
+body .server_category .content_wrapper .left_content .categoryName .erweima > span.yuyue {
+  color: #fb474f;
+}
+body .server_category .content_wrapper .left_content .desc_container {
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 25px 25px;
+}
+body .server_category .content_wrapper .left_content .desc_container > b {
+  font-size: 16px;
+  border-bottom: 3px solid #fb474f;
+  padding: 5px;
+  margin-top: 15px;
+  display: inline-block;
+  font-weight: 700;
+}
+body .server_category .content_wrapper .left_content .desc_container > pre {
+  text-align: left;
+  line-height: 24px;
+  margin: 15px 0 5px;
+  font-size: 14px;
+  background-color: #fff;
+  border: none;
+  border-radius: 0;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+body .server_category .content_wrapper .left_content .desc_container > p {
+  font-size: 14px;
+  margin-top: 15px;
+}
+body .server_category .content_wrapper .left_content .desc_container .xuzhi {
+  background: #FFFCF1;
+  padding-top: 10px;
+  font-size: 14px;
+  line-height: 24px;
+}
+body .server_category .content_wrapper .left_content .desc_container .companyText {
+  line-height: 24px;
+  font-size: 14px;
+  white-space: pre-wrap;
+  margin-top: 0;
+}
+body .server_category .content_wrapper .right_content {
+  width: 20%;
+  margin: 90px 0 0 10px;
+}
+body .server_category .content_wrapper .right_content .fistPic {
+  width: 85%;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  text-align: center;
+  box-sizing: border-box;
+}
+body .server_category .content_wrapper .right_content .fistPic > h3 {
+  font-size: 20px;
+  padding-left: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  height: 60px;
+  line-height: 60px;
+  text-align: left;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+body .server_category .content_wrapper .right_content .fistPic .logo {
+  width: 40%;
+  border: 1px solid #e5e5e5;
+  display: block;
+  margin: 40px 0 10px 75px;
+  box-sizing: border-box;
+}
+body .server_category .content_wrapper .right_content .fistPic > p {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  padding: 0 10px;
+  line-height: 36px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+body .server_category .content_wrapper .right_content .fistPic .orderCount {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+body .server_category .content_wrapper .right_content .fistPic .orderCount :nth-child(2) {
+  color: #FF0000;
+}
+body .server_category .content_wrapper .right_content .secondPic {
+  margin-top: 10px;
+  width: 100%;
+  height: 300px;
+  background: url('../images_details/fuwushang2_10.jpg') no-repeat;
+}
+body .server_category .content_wrapper .right_content .secondPic .apper {
+  width: 130px;
+  margin: 50px;
+}
+body .server_category .dapwei_footer {
+  width: 100%;
+  background: #fff;
+}
+body .server_category .dapwei_footer .baozhang {
+  width: 100%;
+  text-align: center;
+  padding-top: 60px;
+}
+body .server_category .dapwei_footer .baozhang > h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 20px 0 10px 0 ;
+}
+body .server_category .dapwei_footer .baozhang > h2 > span {
+  color: #fb474f;
+  font-weight: 900;
+}
+body .server_category .dapwei_footer .baozhang > p {
+  margin-top: 15px;
+  font-size: 22px;
+}
+body .server_category .dapwei_footer .pass_server {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+body .server_category .dapwei_footer .pass_server > ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+}
+body .server_category .dapwei_footer .pass_server > ul > li {
+  font-size: 18px;
+  color: #1d1515;
+  margin: 0 15px;
+}
+body .server_category .dapwei_footer .pass_server > ul > li .iconfont {
+  font-size: 22px;
+  color: #008000;
+  font-weight: bold;
+}
+body .server_category .dapwei_footer .remen_city {
+  width: 100%;
+  padding: 50px 0 20px 0;
+}
+body .server_category .dapwei_footer .remen_city > ul {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+body .server_category .dapwei_footer .remen_city > ul .title {
+  width: 10%;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+}
+body .server_category .dapwei_footer .remen_city > ul .city_name {
+  text-align: right;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+body .server_category .dapwei_footer .remen_city > ul .city_name a {
+  width: 8%;
+  margin: 0 5px 15px 5px;
+  font-size: 16px;
+  color: #898989;
+  display: block;
+  font-weight: 200;
+  text-align: center;
+}
+body .server_category .copy_container {
+  width: 100%;
+  background: #FBF8F8;
+  line-height: 50px;
+}
+body .server_category .copy_container .copy {
+  margin: 0 auto;
+  width: 90%;
+  color: #898989;
+  font-size: 16px;
+}
