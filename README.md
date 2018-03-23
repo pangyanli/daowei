@@ -1,4 +1,5 @@
-# # 使用express创建项目
+# day 01
+  ## 使用express创建项目
       1、安装：npm install express-generator -g
       2、express daowei
         生成目录结构如下：
@@ -24,7 +25,7 @@
           npm install nodemon
           在package.json配置： "start": "node ./bin/www" -->  "start": "nodemon ./bin/www"
           
-  # Mongoose的使用步骤：
+  ## Mongoose的使用步骤：
       1.下载安装mongoose
         npm i mongoose --save
       2、创建tools文件夹，创建 connectMDB.js 
@@ -55,7 +56,106 @@
         5）db.comment.insert(复制comment.json文件中的数据粘贴，注意开始和结束不要有空格)  --> F6按键
         6）点击daowei数据库下的comment集合，出来db.comment.find({}) --> F6按键，如果下面有数据显示了
             那就说明插入成功了
-        7）重复5、6步骤，将item/service/shop其他三个集合页插入到daowei数据库    
+        7）重复5、6步骤，将item/service/shop其他三个集合页插入到daowei数据库 
+  ## 具体流程： 
+      一、tools/connectMDB.js  //连接数据库
+          var mongoose = require('mongoose')
+          mongoose.connect('mongodb://127.0.0.1/daowei');  // 连接到位数据库
+          mongoose.connection.on('open', function(){    // 监视数据库的连接状态
+            console.log('daowei数据库连接成功!')
+          })
+      二、models/index.js
+          1、引入连接好的数据库 
+             require('../tools/connectMDB')   // 连接数据库
+             const mongoose = require('mongoose');
+             const Schema = mongoose.Schema;
+          2、创建多个Schema模型对象 （约束）  
+               // 1、创建commentSchema
+               const commentSchema = new Schema({
+                 "iconUrl":String,
+                 "area":String,
+                 "city":String,
+                 "comment":String,
+                 "createtime":Number,
+                 "nick":String,
+                 "star":Number
+               });   // 依次创建itemSchema、serviceSchema、citySchema、shopSchema
+          3、映射Model
+               // 文档构造函数名，文档约束，database中的集合名(要与数据库的一致，不然就容易出错找不到)
+               mongoose.model('comment',commentSchema,'comment')
+               mongoose.model('item',itemSchema,'item')
+               mongoose.model('service',serviceSchema,'service')
+               mongoose.model('shop',shopSchema,'shop')
+               mongoose.model('city',citySchema,'city')
+          4、统一暴露     
+               module.exports = function(collectionName){
+                 return mongoose.model(collectionName)
+               }
+      三、 routes/indexjs   （引入各个Model,通过后台路由，操作数据库，返回数据）       
+               const express = require('express');
+               const router = express.Router();
+               const getCollection = require('../models');   // 引入4个Model
+               const Comment = getCollection('comment');
+               const Item = getCollection('item');
+               const Service = getCollection('service');
+               const Shop = getCollection('shop');
+               const City = getCollection('city');              
+               // 1、设置comment路由,请求comment数据
+               router.get('/getComment', function(req, res) {
+                 const page = req.query.page || 1;
+                 console.log(page)
+                 const projection = null;   // 映射，如果要传第三个参数，第二个参数必须要传
+                 const _filter = {
+                   limit:10,
+                   sort: '-createtime',  // 默认是升序，使用降序排列
+                   skip:(page-1) * 10   // 一次翻十页
+                 }
+                 Comment.find({},projection,_filter,function(err,docs){
+                  if(!err){
+                    // console.log(docs)
+                    res.send(docs)
+                  }
+                 })
+               });
+               
+               // 2、请求item的路由
+               router.get('/getItem',function(req,res){
+                 Item.find({},function(err,docs){
+                  if(!err){
+                    // console.log(docs)
+                    res.send(docs)
+                  }
+                 })
+               })
+               
+               // 3、请求service数据
+               router.get('/getService',function(req,res){
+                 Service.find({}, function(err,docs){
+                  if(!err){
+                    // console.log(docs)
+                    res.send(docs)
+                  }
+                 })
+               })
+               
+               // 4、请求shop数据
+               router.get('/getShop',function(req,res){
+                 Shop.find({},function(err,docs){
+                   if(!err){
+                     // console.log(docs)
+                     res.send(docs)
+                   }
+                 })
+               })
+               // 5、请求city的数据
+               router.get('/getCity',function(req,res){
+                 City.find({},function(err,docs){
+                   if(!err){
+                     res.send(docs)
+                   }
+                 })
+               })
+               module.exports = router;
 # day 02
    ## 一、功能
     1、发请求，使用模版渲染首页数据
@@ -84,6 +184,9 @@
          小宽度也很大才可以
           min-width: 1400px;
           max-width: 1600px;
+               
+   ## 分页的实现
+     
                
                
               

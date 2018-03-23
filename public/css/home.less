@@ -55,6 +55,19 @@ body{
           }
         }
       }
+      &.ani{
+        animation-name: anima;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+      }
+      @keyframes ani{
+        from{
+          transform: translateY(-100%) rotateX(90deg);
+        }
+        to{
+          transform: translateY(0) rotateX(0);
+        }
+      }
     }
     // 轮播样式
     .banner_wrapper{
@@ -112,6 +125,7 @@ body{
             text-align: center;
             &:hover{
               background:darkslategray;
+
             }
             >a{
               display: block;

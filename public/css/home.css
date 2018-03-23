@@ -53,6 +53,19 @@ body .daowei .header .header_wrapper .nav_list > a.shop_login {
   border-radius: 5px;
   padding: 5px 5px;
 }
+body .daowei .header.ani {
+  animation-name: anima;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+@keyframes ani {
+  from {
+    transform: translateY(-100%) rotateX(90deg);
+  }
+  to {
+    transform: translateY(0) rotateX(0);
+  }
+}
 body .daowei .banner_wrapper {
   width: 100%;
   position: relative;

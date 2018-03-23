@@ -12,6 +12,7 @@
   <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
   <script type="text/javascript" src="./js/swiper.min.js"></script>
   <script type="text/javascript" src="./js/template-web.js"></script>
+  <script src="https://cdn.bootcss.com/moment.js/2.21.0/moment.min.js"></script>
 </head>
 <body>
 <div class="server_details">
@@ -39,7 +40,7 @@
   </header>
  <!-- 标题-->
   <div class="details_title">
-    <div class="title_content">
+    <!--<div class="title_content">
       <div class="left_content">
         <span class="name">云家政</span>
         <span class="start_time">
@@ -75,7 +76,7 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div>-->
   </div>
   <!--黑色导航-->
   <div class="details_nav">
@@ -100,14 +101,15 @@
   <!-- 主体内容 -->
   <div class="details_content">
     <div class="details_content_left">
-      <h3>
-        <span class="shop_title">服务项目</span>
-      </h3>
-      <div class="boxtab">
-        <a href="javascript:;">
-          <div class="boxtab_container">
-            <img src="./images_details/1-detaile1.jpg" alt="">
-            <span class="boxtab_center">
+      <div class="item_cc">
+       <!-- <h3>
+          <span class="shop_title">服务项目</span>
+        </h3>
+        <div class="boxtab">
+          <a href="javascript:;">
+            <div class="boxtab_container">
+              <img src="./images_details/1-detaile1.jpg" alt="">
+              <span class="boxtab_center">
               <span class="name">家庭保洁</span>
               <span class="description">家庭保洁服务，2小时起订，服务时间未使用完不做退款处理。阿...</span>
               <span class="price">
@@ -118,31 +120,32 @@
                 </span>
               </span>
             </span>
-            <span class="boxtab_right">已售60023</span>
-          </div>
-        </a>
+              <span class="boxtab_right">已售60023</span>
+            </div>
+          </a>
+        </div>
+        <div class="space1"></div>
+        <h3>
+          <span class="shop_title">商家简介</span>
+        </h3>
+        <div class="company">
+          上海家谐网络科技有限公司
+          <img src="./images_details/renzheng.jpg" alt="">
+        </div>
+        <p class="profile">
+          云家政是家政服务在线预订平台。我们的目标是让每个家庭都能获得诚信、便捷、有保障的家政服务。云家政拥有国内最大的实
+          名认证家庭服务员数据库，目前平台上有超过100000名专业服务人员；数百个家政服务商，遍布全国主要城市各个社区。云家政
+          倡导简单、轻松的生活方式。通过把分散的家政服务能力汇集和分配，让中国家庭获得诚信、便捷、有保障的家政服务，解决日
+          常生活中的麻烦事，把更多时间留给自己和家人，提高生活品质。
+        </p>
+        <div class="space2"></div>
+        <h3>
+          <span class="shop_title">用户评论</span>
+          <span class="rating_total">（10388条评论）</span>
+        </h3>-->
       </div>
-      <div class="space1"></div>
-      <h3>
-        <span class="shop_title">商家简介</span>
-      </h3>
-      <div class="company">
-        上海家谐网络科技有限公司
-        <img src="./images_details/renzheng.jpg" alt="">
-      </div>
-      <p class="profile">
-        云家政是家政服务在线预订平台。我们的目标是让每个家庭都能获得诚信、便捷、有保障的家政服务。云家政拥有国内最大的实
-        名认证家庭服务员数据库，目前平台上有超过100000名专业服务人员；数百个家政服务商，遍布全国主要城市各个社区。云家政
-        倡导简单、轻松的生活方式。通过把分散的家政服务能力汇集和分配，让中国家庭获得诚信、便捷、有保障的家政服务，解决日
-        常生活中的麻烦事，把更多时间留给自己和家人，提高生活品质。
-      </p>
-      <div class="space2"></div>
-      <h3>
-        <span class="shop_title">用户评论</span>
-        <span class="rating_total">（10388条评论）</span>
-      </h3>
       <div class="comment_container">
-        <div class="comments">
+        <!--<div class="comments">
           <img  class="avatar" src="./images_details/touxiang.jpg" alt="">
           <ul>
             <li class="user_name">u46829989</li>
@@ -279,33 +282,10 @@
               <span class="didian">上海 闵行区</span>
             </li>
           </ul>
-        </div>
-        <div class="comments">
-          <img  class="avatar" src="./images_details/touxiang.jpg" alt="">
-          <ul>
-            <li class="user_name">u46829989</li>
-            <li>
-              <span class="start">
-                <span class="start_icon">
-                  <img src="./images_details/red_star.png" alt="">
-                  <img src="./images_details/red_star.png" alt="">
-                  <img src="./images_details/red_star.png" alt="">
-                  <img src="./images_details/red_star.png" alt="">
-                  <img src="./images_details/red_star.png" alt="">
-                </span>
-                <span>2018-03-21</span>
-              </span>
-            </li>
-            <li>准时到达,态度热情,服务专业,两点小时，不错的，专业，干净</li>
-            <li class="city">
-              <span class="iconfont icon-ditu00"></span>
-              <span class="didian">上海 闵行区</span>
-            </li>
-          </ul>
-        </div>
+        </div>-->
       </div>
       <div class="fanye">
-        <a href="javascript:;" class="go_back">&lt;&nbsp;上一页</a>
+        <a href="javascript:;" class="go_back" onclick="goUpOrDown('up')">&lt;&nbsp;上一页</a>
         <div class="page_wrap">
           <a href="javascript:;" class="on">1</a>
           <a href="javascript:;">2</a>
@@ -316,12 +296,10 @@
           <a href="javascript:;">7</a>
           <a href="javascript:;">8</a>
           <a href="javascript:;">9</a>
-          <a href="javascript:;">10</a>
           ...
         </div>
-        <a href="javascript:;" class="next_page">上一页&nbsp;&gt;</a>
+        <a href="javascript:;" class="next_page" onclick="goUpOrDown('down')">下一页&nbsp;&gt;</a>
       </div>
-
     </div>
     <div class="details_content_right">
       <div class="right_img">
@@ -407,24 +385,214 @@
   </div>
 </div>
 <script type="text/javascript">
+  let page = 0
   $(document).ready(function(){
-    new Swiper ('.banner.swiper-container', {
-      loop: true,
-      // 小圆点分页器
-      pagination: {
-        el: '.swiper-pagination',
-      },
-      effect : 'fade',
-      fadeEffect: {  // 淡入淡出
-        delay: 3000,
-        crossFade: true,
-      },
-      autoplay: {  // 配置无限循环轮播
-        delay: 3000,
-        disableOnInteraction: false,
-      }
+   // 1、获取item数据
+    $.get('/getItem?id=1001',function(data){
+      $('.details_title').append(template('title_temp',{item:data}))
+      $('.item_cc').append(template('content_temp',{item:data}))
     })
+    // 2、获取comments数据,记得传page参数，上来默认就是第一页的评论
+    $.get('/getComment?page='+ page, function(data){
+      setStar(data);
+      $('.comment_container').html(template('comment_temp',{comments:data}))
+    })
+
+    // 3、点击翻页的按钮事件,请求指定page页的comments
+    /*
+     1)获取所有按钮的a标签伪数组 $aList
+     2)jQuery中不用遍历伪数组就可以直接给数组中的元素绑定点击事件
+     3）将数组中的所有元素的选中状态的样式on移除
+     4）给当前的a标签添加选中的样式on
+     5）保存当前的a的下标
+     6）当前的评论列表页就是点击当前选中的a标签的下标+1
+     7）将模板渲染到真实DOM中注意如果是append添加模版的话，
+      就会是累加的结果，即显示的是page1+page2+...的效果
+    */
+    const $aList = $('.page_wrap > a')
+    $aList.click(function(){
+      $aList.removeClass('on');
+      $(this).addClass('on') ;
+      page = $(this).index() ;
+      console.log(page)
+      $.get('/getComment?page=' + page, function(data){
+        setStar(data);
+        $('.comment_container').html(template('comment_temp',{comments:data}))
+      })
+    })
+
   })
+
+  // 4、点击上一页或者下一页的按钮
+  function goUpOrDown(type) {
+    if(type === 'up'){  //返回上一页
+      if(page < 1){
+        page = 1;
+        return;
+      }else {
+        page --;
+        let $aList = $('.page_wrap > a')
+        $aList.removeClass('on')
+        $($aList[page]).addClass('on')
+      }
+
+      $.get('/getComment?page=' + page, function(data){
+        setStar(data);
+        $('.comment_container').html(template('comment_temp',{comments:data}))
+      })
+    }else if(type === 'down'){ // 点击下一页
+      if(page > 7){   // 因为下标是从0开始的，当下标为8页就第9页，进来后就留在最后一页不动了
+        page = 8;
+        return
+      }else {
+        page ++;
+        let $aList = $('.page_wrap > a')
+        $aList.removeClass('on')
+        $($aList[page]).addClass('on')
+      }
+      $.get('/getComment?page=' + page, function(data){
+        setStar(data);
+        $('.comment_container').html(template('comment_temp',{comments:data}))
+      })
+    }
+  }
+
+  // 5、得到评价星星的数量
+  /*  1、先设置一个空的数组starArr，存放星星的，有两种，一组是红色的一种是灰色的，红星的个数=count
+      灰星的个数=starArr.length - count
+   */
+  function getStar(count){
+    let starArr = [];
+    for (var i = 0; i < count; i++) {
+     starArr.push('red_star.png')
+    }
+    while(starArr.length < 5){
+      starArr.push('gray_star.png')
+    }
+    return starArr
+  }
+  // 设置星星的样式，遍历data得到每个comment对象，并取出star数量，然后给每个comment对象添加一个
+  // starClass样式，在模板中就遍历这个样式数组来取星星图片
+  function setStar(data) {
+    for (var i = 0; i < data.length; i++) {
+      let count = data[i].star
+      let starArr = getStar(count)
+      data[i].starClass = starArr
+    }
+  }
+
+  //评论时间的过滤器
+  template.defaults.imports.dateFormat = function(value, format){
+    return moment(value).format(format);
+  }
+
+
 </script>
+<script id="title_temp" type="text/html">
+  <div class="title_content">
+    <div class="left_content">
+      <span class="name">{{item[0].title}}</span>
+      <span class="start_time">
+          营业时间：
+          <span>09:00-18:00</span>
+        </span>
+      <span class="end_time">
+          最近可预约时间：
+          <span>03月21日 12:30</span>
+        </span>
+    </div>
+    <div class="right_content">
+      <ul>
+        <li>
+            <span class="rating">
+              <span>{{item[0].orderCount}}</span>
+                成功接单
+              </span>
+          <span>|</span>
+        </li>
+        <li>
+            <span class="rating">
+              <span>{{item[0].accept}}</span>
+                接单率
+              </span>
+          <span>|</span>
+        </li>
+        <li>
+            <span class="rating">
+              <span>{{item[0].praise}}</span>
+              好评率
+            </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</script>
+<script id="content_temp" type="text/html">
+  <h3>
+    <span class="shop_title">服务项目</span>
+  </h3>
+  <div class="boxtab">
+    <a href="javascript:;">
+      <div class="boxtab_container">
+        <img src="./images_details/1-detaile1.jpg" alt="">
+        <span class="boxtab_center">
+              <span class="name">{{item[0].name}}</span>
+              <span class="description">{{item[0].desc}}</span>
+              <span class="price">
+                <span class="now_price">{{item[0].price}}</span>元/小时
+                <span class="old_price">
+                  原价
+                  <del>{{item[0].oldPrice}}</del>
+                </span>
+              </span>
+            </span>
+        <span class="boxtab_right">已售{{item[0].soldCount}}</span>
+      </div>
+    </a>
+  </div>
+  <div class="space1"></div>
+  <h3>
+    <span class="shop_title">商家简介</span>
+  </h3>
+  <div class="company">
+    {{item[0].company}}
+    <img src="./images_details/renzheng.jpg" alt="">
+  </div>
+  <p class="profile">
+    {{item[0].profile}}
+  </p>
+  <div class="space2"></div>
+  <h3>
+    <span class="shop_title">用户评论</span>
+    <span class="rating_total">（10388条评论）</span>
+  </h3>
+</script>
+<script id="comment_temp" type="text/html">
+  {{each comments}}
+    <div class="comments">
+      <img  class="avatar" src={{$value.iconUrl}} alt="">
+      <ul>
+        <li class="user_name">{{$value.nick}}</li>
+        <li>
+          <span class="start">
+            <span class="start_icon">
+              {{each $value.starClass}}
+                <img src="./images_details/{{$value}}" alt="">
+              {{/each}}
+            </span>
+            <span>{{$value.createtime | dateFormat 'YYYY-MM-DD'}}</span>
+          </span>
+        </li>
+        <li>{{$value.comment}}</li>
+        <li class="city">
+          <span class="iconfont icon-ditu00"></span>
+          <span class="didian">{{$value.city}} {{$value.area}}</span>
+        </li>
+      </ul>
+    </div>
+  {{/each}}
+
+</script>
+
 </body>
 </html>

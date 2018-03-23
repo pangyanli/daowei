@@ -205,6 +205,7 @@
 
   <script type="text/javascript">
     $(document).ready(function(){
+
       // 1、使用swiper生成轮播
       new Swiper ('.banner.swiper-container', {
         loop: true,
@@ -242,6 +243,14 @@
         $('.city_name').append(template('city',{citys:data}))
       })
 
+      // 头部动画效果
+      $('document').scroll(function(){
+        if($(this).scrollTop >= 71){
+          $('.header').addClass('ani')
+        }else{
+          $('.header').removeClass('ani')
+        }
+      })
     })
 
   </script>
