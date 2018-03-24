@@ -8,7 +8,7 @@ body .server_shops {
 }
 body .server_shops .header {
   width: 100%;
-  background: #fff;
+  background-color: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid #e5e5e5;
 }
 body .server_shops .header .header_wrapper {
@@ -52,6 +52,26 @@ body .server_shops .header .header_wrapper .nav_list > a.shop_login {
   background: red;
   border-radius: 5px;
   padding: 5px 5px;
+}
+body .server_shops .topFixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+body .server_shops .ani {
+  animation-name: anima;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+@keyframes anima {
+  from {
+    transform: translateY(-100%) rotateX(90deg);
+  }
+  to {
+    transform: translateY(0) rotateX(0);
+  }
 }
 body .server_shops .content_wrapper {
   width: 90%;

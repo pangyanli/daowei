@@ -28,9 +28,9 @@
        <a href="javascript:;" class="tab_city">切换城市</a>
       </span>
       <span class="nav_list">
-        <a href="javascript:;" class="on">首页</a>
+        <a href="index.html">首页</a>
         <a href="javascript:;">到位APP</a>
-        <a href="javascript:;">服务商</a>
+        <a href="javascript:;" class="on">服务商</a>
         <a href="javascript:;">商家入驻</a>
         <a href="javascript:;">风流APP</a>
         <a href="javascript:;">关于我们</a>
@@ -81,7 +81,7 @@
   <!--黑色导航-->
   <div class="details_nav">
     <ul class="nav_ul">
-      <li class="nav_li on">
+      <li class="nav_li bj">
         <a href="javascript:;">
           服务项目
         </a>
@@ -92,7 +92,8 @@
         </a>
       </li>
       <li class="nav_li">
-        <a href="javascript:;">
+        <!-- 锚点链接 -->
+        <a href="#commentId">
           用户评论
         </a>
       </li>
@@ -144,7 +145,7 @@
           <span class="rating_total">（10388条评论）</span>
         </h3>-->
       </div>
-      <div class="comment_container">
+      <div id="commentId" class="comment_container">
         <!--<div class="comments">
           <img  class="avatar" src="./images_details/touxiang.jpg" alt="">
           <ul>
@@ -384,6 +385,7 @@
     <p class="copy">©2015 版权所有 到位 daoway.com 京ICP备15001471号-1 北京邻家科技有限公司</p>
   </div>
 </div>
+<!-- js代码 -->
 <script type="text/javascript">
   let page = 0
   $(document).ready(function(){
@@ -395,7 +397,7 @@
     // 2、获取comments数据,记得传page参数，上来默认就是第一页的评论
     $.get('/getComment?page='+ page, function(data){
       setStar(data);
-      $('.comment_container').html(template('comment_temp',{comments:data}))
+      $('#commentId').html(template('comment_temp',{comments:data}))
     })
 
     // 3、点击翻页的按钮事件,请求指定page页的comments
@@ -409,7 +411,7 @@
      7）将模板渲染到真实DOM中注意如果是append添加模版的话，
       就会是累加的结果，即显示的是page1+page2+...的效果
     */
-    const $aList = $('.page_wrap > a')
+    const $aList = $('.page_wrap>a')
     $aList.click(function(){
       $aList.removeClass('on');
       $(this).addClass('on') ;
@@ -417,8 +419,24 @@
       console.log(page)
       $.get('/getComment?page=' + page, function(data){
         setStar(data);
-        $('.comment_container').html(template('comment_temp',{comments:data}))
+        $('#commentId').html(template('comment_temp',{comments:data}))
       })
+    })
+
+    // 5、点击黑色导航条实现服务项目/商家简介/用户评论切换
+    const $tabList = $('.nav_ul .nav_li')
+    $tabList.click(function(){
+      $tabList.removeClass('bj')
+      $(this).addClass('bj')
+    })
+
+    // 头部动画效果
+    $(window).scroll(function(){
+      if($(this).scrollTop()>= 71){
+        $('.header').addClass('topFixed').addClass('ani')
+      }else{
+        $('.header').removeClass('ani').removeClass('topFixed')
+      }
     })
 
   })
@@ -438,7 +456,7 @@
 
       $.get('/getComment?page=' + page, function(data){
         setStar(data);
-        $('.comment_container').html(template('comment_temp',{comments:data}))
+        $('#commentId').html(template('comment_temp',{comments:data}))
       })
     }else if(type === 'down'){ // 点击下一页
       if(page > 7){   // 因为下标是从0开始的，当下标为8页就第9页，进来后就留在最后一页不动了
@@ -452,7 +470,7 @@
       }
       $.get('/getComment?page=' + page, function(data){
         setStar(data);
-        $('.comment_container').html(template('comment_temp',{comments:data}))
+        $('#commentId').html(template('comment_temp',{comments:data}))
       })
     }
   }
@@ -481,13 +499,14 @@
     }
   }
 
-  //评论时间的过滤器
+  //6、评论时间的过滤器
   template.defaults.imports.dateFormat = function(value, format){
     return moment(value).format(format);
   }
 
 
 </script>
+<!-- 云家政标题模板 -->
 <script id="title_temp" type="text/html">
   <div class="title_content">
     <div class="left_content">
@@ -527,12 +546,14 @@
     </div>
   </div>
 </script>
+<!-- 服务项目模板 -->
 <script id="content_temp" type="text/html">
   <h3>
     <span class="shop_title">服务项目</span>
   </h3>
   <div class="boxtab">
-    <a href="javascript:;">
+    <!-- 点击跳转到分类页面 -->
+    <a href="category.html">
       <div class="boxtab_container">
         <img src="./images_details/1-detaile1.jpg" alt="">
         <span class="boxtab_center">
@@ -567,6 +588,7 @@
     <span class="rating_total">（10388条评论）</span>
   </h3>
 </script>
+<!-- 评论模板 -->
 <script id="comment_temp" type="text/html">
   {{each comments}}
     <div class="comments">

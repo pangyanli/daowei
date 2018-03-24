@@ -1,17 +1,13 @@
-body {
-  min-width: 1400px;
-  max-width: 1600px;
-}
-body .daowei {
+.daowei {
   width: 100%;
   height: 100%;
 }
-body .daowei .header {
+.daowei .header {
   width: 100%;
-  background: #fff;
+  background-color: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid #e5e5e5;
 }
-body .daowei .header .header_wrapper {
+.daowei .header .header_wrapper {
   width: 90%;
   height: 70px;
   margin: 0 auto;
@@ -22,43 +18,50 @@ body .daowei .header .header_wrapper {
   align-items: center;
   white-space: nowrap;
 }
-body .daowei .header .header_wrapper .city > a {
+.daowei .header .header_wrapper .city > a {
   color: #000;
   font-size: 16px;
   font-weight: bold;
 }
-body .daowei .header .header_wrapper .city > a.iconfont {
+.daowei .header .header_wrapper .city > a.iconfont {
   font-size: 22px;
   color: #FF0000;
   margin-right: -5px;
 }
-body .daowei .header .header_wrapper .city > a.tab_city:hover {
+.daowei .header .header_wrapper .city > a.tab_city:hover {
   color: #e94840;
 }
-body .daowei .header .header_wrapper .nav_list > a {
+.daowei .header .header_wrapper .nav_list > a {
   color: #000;
   font-size: 16px;
   font-weight: bold;
   margin: 0 10px;
 }
-body .daowei .header .header_wrapper .nav_list > a:hover {
+.daowei .header .header_wrapper .nav_list > a:hover {
   color: #e94840;
 }
-body .daowei .header .header_wrapper .nav_list > a.on {
+.daowei .header .header_wrapper .nav_list > a.on {
   color: #e94840;
 }
-body .daowei .header .header_wrapper .nav_list > a.shop_login {
+.daowei .header .header_wrapper .nav_list > a.shop_login {
   color: #ffffff;
   background: red;
   border-radius: 5px;
   padding: 5px 5px;
 }
-body .daowei .header.ani {
+.daowei .topFixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+.daowei .ani {
   animation-name: anima;
   animation-duration: 2s;
   animation-timing-function: ease;
 }
-@keyframes ani {
+@keyframes anima {
   from {
     transform: translateY(-100%) rotateX(90deg);
   }
@@ -66,85 +69,91 @@ body .daowei .header.ani {
     transform: translateY(0) rotateX(0);
   }
 }
-body .daowei .banner_wrapper {
+.daowei .banner_wrapper {
   width: 100%;
   position: relative;
 }
-body .daowei .banner_wrapper .swiper-container {
+.daowei .banner_wrapper .swiper-container {
   width: 100%;
   height: 420px;
 }
-body .daowei .banner_wrapper .swiper-container .swiper-wrapper {
+.daowei .banner_wrapper .swiper-container .swiper-wrapper {
   width: 100%;
   height: 100%;
 }
-body .daowei .banner_wrapper .swiper-container .swiper-wrapper .swiper-slide {
+.daowei .banner_wrapper .swiper-container .swiper-wrapper .swiper-slide {
   width: 100%;
   height: 100%;
 }
-body .daowei .banner_wrapper .swiper-container .swiper-wrapper .swiper-slide .banner_bd {
+.daowei .banner_wrapper .swiper-container .swiper-wrapper .swiper-slide .banner_bd {
   width: 100%;
   height: 100%;
 }
-body .daowei .banner_wrapper .swiper-container .swiper-wrapper .swiper-slide .banner_bd.bd1 {
+.daowei .banner_wrapper .swiper-container .swiper-wrapper .swiper-slide .banner_bd.bd1 {
   background: url('../images_msite/banner1.jpg') center center no-repeat;
 }
-body .daowei .banner_wrapper .swiper-container .swiper-wrapper .swiper-slide .banner_bd.bd2 {
+.daowei .banner_wrapper .swiper-container .swiper-wrapper .swiper-slide .banner_bd.bd2 {
   background: url('../images_msite/banner2.jpg') center center no-repeat;
 }
-body .daowei .banner_wrapper .swiper-container .swiper-wrapper .swiper-slide .banner_bd.bd3 {
+.daowei .banner_wrapper .swiper-container .swiper-wrapper .swiper-slide .banner_bd.bd3 {
   background: url('../images_msite/banner3.jpg') center center no-repeat;
 }
-body .daowei .banner_wrapper .swiper-container .swiper-pagination > span.swiper-pagination-bullet-active {
-  background: #02a774;
+.daowei .banner_wrapper .swiper-container .swiper-pagination > span.swiper-pagination-bullet-active {
+  background: #fff;
 }
-body .daowei .banner_wrapper .banner_nav {
+.daowei .banner_wrapper .banner_nav {
   height: 100%;
   width: 180px;
   background: #757881;
   position: absolute;
   top: 0;
   left: 7%;
-  z-index: 100;
+  z-index: 50;
 }
-body .daowei .banner_wrapper .banner_nav .nav_wrap {
+.daowei .banner_wrapper .banner_nav .nav_wrap {
   height: 100%;
   width: 100%;
 }
-body .daowei .banner_wrapper .banner_nav .nav_wrap .nav_list {
+.daowei .banner_wrapper .banner_nav .nav_wrap .nav_list {
   width: 100%;
   height: 42px;
   line-height: 42px;
   color: #fff;
   text-align: center;
+  box-sizing: border-box;
 }
-body .daowei .banner_wrapper .banner_nav .nav_wrap .nav_list:hover {
+.daowei .banner_wrapper .banner_nav .nav_wrap .nav_list:hover {
   background: darkslategray;
 }
-body .daowei .banner_wrapper .banner_nav .nav_wrap .nav_list > a {
+.daowei .banner_wrapper .banner_nav .nav_wrap .nav_list:hover .xiangzuo {
+  opacity: 1;
+}
+.daowei .banner_wrapper .banner_nav .nav_wrap .nav_list:hover .gengduo {
+  opacity: 0;
+}
+.daowei .banner_wrapper .banner_nav .nav_wrap .nav_list > a {
   display: block;
   width: 100%;
   height: 100%;
   position: relative;
 }
-body .daowei .banner_wrapper .banner_nav .nav_wrap .nav_list > a > span {
+.daowei .banner_wrapper .banner_nav .nav_wrap .nav_list > a > span {
   color: #fff;
   font-size: 16px;
   font-weight: bold;
   margin: 0 10px;
 }
-body .daowei .banner_wrapper .banner_nav .nav_wrap .nav_list > a > span.iconfont {
+.daowei .banner_wrapper .banner_nav .nav_wrap .nav_list > a > span.gengduo {
   font-size: 18px;
 }
-body .daowei .banner_wrapper .banner_nav .nav_wrap .nav_list .on {
-  position: absolute;
-  top: 5px;
-  right: -4px;
-  color: #fff;
+.daowei .banner_wrapper .banner_nav .nav_wrap .nav_list > a > span.xiangzuo {
+  opacity: 0;
+  font-size: 16px;
+  margin-right: -26px;
 }
-body .daowei .banner_wrapper .banner_nav .nav_wrap .nav_list .nav_content {
+.daowei .banner_wrapper .banner_nav .nav_wrap .nav_list .nav_content {
   display: none;
-  width: 95%;
+  width: 100%;
   height: 420px;
   position: absolute;
   background: rgba(255, 255, 255, 0.8);
@@ -153,67 +162,65 @@ body .daowei .banner_wrapper .banner_nav .nav_wrap .nav_list .nav_content {
   z-index: 100;
   color: #000;
 }
-body .daowei .banner_wrapper .banner_nav .nav_wrap .nav_list .nav_content .nav_item {
+.daowei .banner_wrapper .banner_nav .nav_wrap .nav_list .nav_content .nav_item {
   width: 100%;
   height: 42px;
   line-height: 42px;
   font-size: 16px;
   font-weight: bold;
 }
-body .daowei .box_container {
+.daowei .box_container {
   width: 100%;
 }
-body .daowei .box_container:nth-child(2n) {
-  background: #FBF8F8;
-}
-body .daowei .box_container .box1 {
+.daowei .box_container .box1 {
   width: 100%;
   padding-bottom: 20px;
 }
-body .daowei .box_container .box1 .family_container {
+.daowei .box_container .box1 .family_container {
   width: 90%;
   margin: 0 auto;
   padding-top: 50px;
 }
-body .daowei .box_container .box1 .family_container .navigation {
+.daowei .box_container .box1 .family_container .navigation {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body .daowei .box_container .box1 .family_container .navigation .service_title {
+.daowei .box_container .box1 .family_container .navigation .service_title {
   width: 100%;
   text-align: center;
   color: #3d3838;
   font-weight: 800;
   font-size: 28px;
 }
-body .daowei .box_container .box1 .family_container .navigation .service_content {
+.daowei .box_container .box1 .family_container .navigation .service_content {
   width: 100%;
   font-size: 22px;
-  margin-top: 15px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   white-space: nowrap;
 }
-body .daowei .box_container .box1 .family_container .navigation .service_content .service_list {
+.daowei .box_container .box1 .family_container .navigation .service_content .service_list {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-body .daowei .box_container .box1 .family_container .navigation .service_content .service_list > a {
-  margin: 0 5px;
+.daowei .box_container .box1 .family_container .navigation .service_content .service_list > a {
+  font-size: 22px;
+  margin: 5px;
   color: #3d3838;
 }
-body .daowei .box_container .box1 .family_container .service_type {
+.daowei .box_container .box1 .family_container .service_type {
   width: 100%;
   margin-top: 25px;
   display: flex;
 }
-body .daowei .box_container .box1 .family_container .service_type .server_item {
+.daowei .box_container .box1 .family_container .service_type .server_item {
   width: 20%;
 }
-body .daowei .box_container .box1 .family_container .service_type .server_item > a .item_container {
+.daowei .box_container .box1 .family_container .service_type .server_item > a .item_container {
   box-sizing: border-box;
   padding: 10px;
   border: 1px solid #eaeaea;
@@ -221,17 +228,17 @@ body .daowei .box_container .box1 .family_container .service_type .server_item >
   background: #fff;
   cursor: pointer;
 }
-body .daowei .box_container .box1 .family_container .service_type .server_item > a .item_container > img {
+.daowei .box_container .box1 .family_container .service_type .server_item > a .item_container > img {
   width: 100%;
 }
-body .daowei .box_container .box1 .family_container .service_type .server_item > a .item_container .server_name {
+.daowei .box_container .box1 .family_container .service_type .server_item > a .item_container .server_name {
   width: 100%;
   font-size: 16px;
   padding: 5px 0;
   font-weight: 800;
   color: #000;
 }
-body .daowei .box_container .box1 .family_container .service_type .server_item > a .item_container .description {
+.daowei .box_container .box1 .family_container .service_type .server_item > a .item_container .description {
   color: #929292;
   padding: 5px 0;
   overflow: hidden;
@@ -240,7 +247,7 @@ body .daowei .box_container .box1 .family_container .service_type .server_item >
   font-size: 13px;
   line-height: 18px;
 }
-body .daowei .box_container .box1 .family_container .service_type .server_item > a .item_container .price {
+.daowei .box_container .box1 .family_container .service_type .server_item > a .item_container .price {
   height: 20px;
   font-size: 14px;
   padding: 10px 5px;
@@ -248,11 +255,11 @@ body .daowei .box_container .box1 .family_container .service_type .server_item >
   line-height: 20px;
   color: #fb474f;
 }
-body .daowei .box_container .box1 .family_container .service_type .server_item > a .item_container .price :nth-child(1) {
+.daowei .box_container .box1 .family_container .service_type .server_item > a .item_container .price :nth-child(1) {
   font-size: 20px;
   font-weight: 600;
 }
-body .daowei .box_container .box1 .family_container .service_type .server_item > a .item_container .btn {
+.daowei .box_container .box1 .family_container .service_type .server_item > a .item_container .btn {
   float: right;
   width: 76px;
   height: 24px;
@@ -263,73 +270,76 @@ body .daowei .box_container .box1 .family_container .service_type .server_item >
   color: #fff;
   font-size: 14px;
 }
-body .daowei .dapwei_footer {
+.daowei .box_container .box1:nth-child(2n) {
+  background: #FBF8F8;
+}
+.daowei .dapwei_footer {
   width: 100%;
   background: #fff;
 }
-body .daowei .dapwei_footer .baozhang {
+.daowei .dapwei_footer .baozhang {
   width: 100%;
   text-align: center;
   padding-top: 60px;
 }
-body .daowei .dapwei_footer .baozhang > h2 {
+.daowei .dapwei_footer .baozhang > h2 {
   font-size: 30px;
   font-weight: 800;
   margin: 20px 0 10px 0 ;
 }
-body .daowei .dapwei_footer .baozhang > h2 > span {
+.daowei .dapwei_footer .baozhang > h2 > span {
   color: #fb474f;
   font-weight: 900;
 }
-body .daowei .dapwei_footer .baozhang > p {
+.daowei .dapwei_footer .baozhang > p {
   margin-top: 15px;
   font-size: 22px;
 }
-body .daowei .dapwei_footer .pass_server {
+.daowei .dapwei_footer .pass_server {
   width: 100%;
   text-align: center;
   margin-top: 20px;
 }
-body .daowei .dapwei_footer .pass_server > ul {
+.daowei .dapwei_footer .pass_server > ul {
   width: 100%;
   display: flex;
   justify-content: center;
   white-space: nowrap;
 }
-body .daowei .dapwei_footer .pass_server > ul > li {
+.daowei .dapwei_footer .pass_server > ul > li {
   font-size: 18px;
   color: #1d1515;
   margin: 0 15px;
 }
-body .daowei .dapwei_footer .pass_server > ul > li .iconfont {
+.daowei .dapwei_footer .pass_server > ul > li .iconfont {
   font-size: 22px;
   color: #008000;
   font-weight: bold;
 }
-body .daowei .dapwei_footer .remen_city {
+.daowei .dapwei_footer .remen_city {
   width: 100%;
-  padding: 50px 0 20px 0;
+  padding: 70px 0 30px 0;
 }
-body .daowei .dapwei_footer .remen_city > ul {
+.daowei .dapwei_footer .remen_city > ul {
   margin: 0 auto;
   width: 90%;
   display: flex;
   justify-content: space-between;
 }
-body .daowei .dapwei_footer .remen_city > ul .title {
+.daowei .dapwei_footer .remen_city > ul .title {
   width: 10%;
   text-align: left;
   font-size: 18px;
   font-weight: 700;
 }
-body .daowei .dapwei_footer .remen_city > ul .city_name {
+.daowei .dapwei_footer .remen_city > ul .city_name {
   text-align: right;
   width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-body .daowei .dapwei_footer .remen_city > ul .city_name a {
+.daowei .dapwei_footer .remen_city > ul .city_name a {
   width: 8%;
   margin: 0 5px 15px 5px;
   font-size: 16px;
@@ -338,40 +348,40 @@ body .daowei .dapwei_footer .remen_city > ul .city_name a {
   font-weight: 200;
   text-align: center;
 }
-body .daowei .dapwei_footer .partner {
+.daowei .dapwei_footer .partner {
   width: 100%;
   background: #FBF8F8;
-  padding-top: 30px;
+  padding-top: 40px;
 }
-body .daowei .dapwei_footer .partner .partner_title {
+.daowei .dapwei_footer .partner .partner_title {
   margin: 0 auto;
   width: 90%;
   text-align: left;
   font-size: 18px;
   font-weight: 700;
 }
-body .daowei .dapwei_footer .partner .shops {
-  margin: 20px auto;
+.daowei .dapwei_footer .partner .shops {
+  margin: 30px auto;
   width: 90%;
   display: flex;
   justify-content: space-between;
 }
-body .daowei .dapwei_footer .partner .shops .shop_name {
+.daowei .dapwei_footer .partner .shops .shop_name {
   width: 10%;
   margin-right: 10px;
   background: #fff;
   box-sizing: border-box;
   padding: 5px 5px;
 }
-body .daowei .dapwei_footer .partner .shops .shop_name a {
+.daowei .dapwei_footer .partner .shops .shop_name a {
   display: block;
   width: 100%;
 }
-body .daowei .dapwei_footer .partner .shops .shop_name a > img {
+.daowei .dapwei_footer .partner .shops .shop_name a > img {
   width: 100%;
   display: block;
 }
-body .daowei .dapwei_footer .partner .copy {
+.daowei .dapwei_footer .partner .copy {
   margin: 0 auto;
   width: 90%;
   color: #898989;

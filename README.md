@@ -185,11 +185,34 @@
           min-width: 1400px;
           max-width: 1600px;
                
-   ## 分页的实现
-     
-               
-               
-              
+   ## 二、级菜单效果的实现
+      1、代码：使用两层ul嵌套
+          <div class="banner_nav">   // 包裹器定位到轮播图上的
+                  <ul class="nav_wrap">   // 外层ul
+                    <li class="nav_list">
+                      <a href="javascript:;" class="aa">
+                        <span>家庭保洁</span>
+                        <span class="gengduo iconfont icon-gengduo"></span>   // 更多按钮
+                        <span class="xiangzuo iconfont icon-xiangzuo3"></span>   // 小白三角
+                      </a>
+                      <ul class="nav_content">   // 里层ul
+                        <li class="nav_item">小时工</li>
+                        ...多个里层的li
+                      </ul>
+                    </li>
+                    ...多个外层的li
+                  </ul>
+                </div>
+      2、样式：         
+         1、最外层包裹器绝对定位到轮播图上，两层的ul>li结构都一样，内层ul参考最外层的父级包裹器的绝对
+          定位开启绝对定位（不要给它的父级li开定位），这样就内层li出来显示的位置都一样了，  
+         2、外层每个li都有一个向右更多的图标和hover时出现的小白三角 ，是通过控制字体图标的opacity来实现的，
+           开始时更多图标的opacity为1，小白三角的opacity是0；当hover到外层li上时，它们的opacity就切换，
+           这样就不用计算top来定位小白三角了
+   
+   ## 三、详情页 
+         1、服务项目/商家简介/用户评论的点击切换，点击用户评论时，要跳到评论内容区，在这里
+         使用的是锚点链接，将用户评论a标签的href 等于评论容器的id值就可以了 :  <a href="#commentId">
                
          
          

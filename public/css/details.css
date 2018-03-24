@@ -1,7 +1,7 @@
 body {
-  max-width: 1600px;
+  /*  max-width: 1600px;
   min-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto;*/
 }
 body .server_details {
   width: 100%;
@@ -9,7 +9,7 @@ body .server_details {
 }
 body .server_details .header {
   width: 100%;
-  background: #fff;
+  background-color: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid #e5e5e5;
 }
 body .server_details .header .header_wrapper {
@@ -54,12 +54,19 @@ body .server_details .header .header_wrapper .nav_list > a.shop_login {
   border-radius: 5px;
   padding: 5px 5px;
 }
-body .server_details .header.ani {
+body .server_details .topFixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+body .server_details .ani {
   animation-name: anima;
   animation-duration: 2s;
   animation-timing-function: ease;
 }
-@keyframes ani {
+@keyframes anima {
   from {
     transform: translateY(-100%) rotateX(90deg);
   }
@@ -140,7 +147,7 @@ body .server_details .details_nav .nav_ul .nav_li {
   line-height: 40px;
   text-align: center;
 }
-body .server_details .details_nav .nav_ul .nav_li.on {
+body .server_details .details_nav .nav_ul .nav_li.bj {
   background: #424242;
 }
 body .server_details .details_nav .nav_ul .nav_li > a {
@@ -152,6 +159,7 @@ body .server_details .details_content {
   margin: 0 auto;
   box-sizing: border-box;
   display: flex;
+  margin-bottom: 50px;
 }
 body .server_details .details_content .details_content_left {
   margin-top: 20px;
@@ -184,6 +192,9 @@ body .server_details .details_content .details_content_left .item_cc .boxtab {
   width: 100%;
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
+}
+body .server_details .details_content .details_content_left .item_cc .boxtab:hover {
+  background: #F8F8F8;
 }
 body .server_details .details_content .details_content_left .item_cc .boxtab > a {
   display: block;
@@ -423,7 +434,7 @@ body .server_details .dapwei_footer .pass_server > ul > li .iconfont {
 }
 body .server_details .dapwei_footer .remen_city {
   width: 100%;
-  padding: 50px 0 20px 0;
+  padding: 70px 0 30px 0;
 }
 body .server_details .dapwei_footer .remen_city > ul {
   margin: 0 auto;
@@ -455,8 +466,8 @@ body .server_details .dapwei_footer .remen_city > ul .city_name a {
 }
 body .server_details .copy_container {
   width: 100%;
-  background: #FBF8F8;
-  line-height: 50px;
+  background: #F8F8F8;
+  line-height: 40px;
 }
 body .server_details .copy_container .copy {
   margin: 0 auto;

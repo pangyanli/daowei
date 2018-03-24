@@ -9,7 +9,7 @@ body .server_category {
 }
 body .server_category .header {
   width: 100%;
-  background: #fff;
+  background-color: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid #e5e5e5;
 }
 body .server_category .header .header_wrapper {
@@ -54,12 +54,19 @@ body .server_category .header .header_wrapper .nav_list > a.shop_login {
   border-radius: 5px;
   padding: 5px 5px;
 }
-body .server_category .header.ani {
+body .server_category .topFixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+body .server_category .ani {
   animation-name: anima;
   animation-duration: 2s;
   animation-timing-function: ease;
 }
-@keyframes ani {
+@keyframes anima {
   from {
     transform: translateY(-100%) rotateX(90deg);
   }

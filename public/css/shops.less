@@ -7,7 +7,7 @@ body{
     //头部样式
     .header{
       width: 100%;
-      background: #fff;
+      background-color: rgba(255, 255, 255, .96);
       border-bottom: 1px solid #e5e5e5;
       .header_wrapper{
         width: 90%;
@@ -54,6 +54,28 @@ body{
             }
           }
         }
+      }
+    }
+    // 头部动画定位
+    .topFixed{
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      //box-shadow:x y blur color
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .12);
+    }
+    .ani{
+      animation-name: anima;
+      animation-duration: 2s;
+      animation-timing-function: ease;
+    }
+    @keyframes anima{
+      from{
+        transform: translateY(-100%) rotateX(90deg);
+      }
+      to{
+        transform: translateY(0) rotateX(0);
       }
     }
     .content_wrapper{

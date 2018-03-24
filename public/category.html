@@ -27,9 +27,9 @@
        <a href="javascript:;" class="tab_city">切换城市</a>
       </span>
       <span class="nav_list">
-        <a href="javascript:;" class="on">首页</a>
+        <a href="index.html">首页</a>
         <a href="javascript:;">到位APP</a>
-        <a href="javascript:;">服务商</a>
+        <a href="shops.html">服务商</a>
         <a href="javascript:;">商家入驻</a>
         <a href="javascript:;">风流APP</a>
         <a href="javascript:;">关于我们</a>
@@ -217,7 +217,14 @@
 </body>
 <script type="text/javascript" src="">
   $(document).readt(function(){
-
+    // 头部动画效果
+    $(window).scroll(function(){
+      if($(this).scrollTop()>= 71){
+        $('.header').addClass('topFixed').addClass('ani')
+      }else{
+        $('.header').removeClass('ani').removeClass('topFixed')
+      }
+    })
   })
 </script>
 

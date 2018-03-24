@@ -1,14 +1,14 @@
-body{
-  max-width: 1600px;
+body{  // 解决浏览器窗口大小变化时，flex布局错乱
+/*  max-width: 1600px;
   min-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto;*/
   .server_details{
     width: 100%;
     background: #F8F8F8;
     //头部样式
     .header{
       width: 100%;
-      background: #fff;
+      background-color: rgba(255, 255, 255, .96);
       border-bottom: 1px solid #e5e5e5;
       .header_wrapper{
         width: 90%;
@@ -56,18 +56,27 @@ body{
           }
         }
       }
-      &.ani{
-        animation-name: anima;
-        animation-duration: 2s;
-        animation-timing-function: ease;
+    }
+    // 头部动画定位
+    .topFixed{
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      //box-shadow:x y blur color
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .12);
+    }
+    .ani{
+      animation-name: anima;
+      animation-duration: 2s;
+      animation-timing-function: ease;
+    }
+    @keyframes anima{
+      from{
+        transform: translateY(-100%) rotateX(90deg);
       }
-      @keyframes ani{
-        from{
-          transform: translateY(-100%) rotateX(90deg);
-        }
-        to{
-          transform: translateY(0) rotateX(0);
-        }
+      to{
+        transform: translateY(0) rotateX(0);
       }
     }
     .details_title{
@@ -145,7 +154,7 @@ body{
           height: 40px;
           line-height: 40px;
           text-align: center;
-          &.on{
+          &.bj{
             background: #424242;
           }
           >a{
@@ -160,6 +169,7 @@ body{
       margin: 0 auto;
       box-sizing: border-box;
       display: flex;
+      margin-bottom: 50px;
       .details_content_left{
         margin-top: 20px;
         width: 80%;
@@ -189,6 +199,9 @@ body{
             width: 100%;
             background: #fff;
             border-bottom: 1px solid #e5e5e5;
+            &:hover{
+              background: #F8F8F8;
+            }
             >a{
               display: block;
               width: 100%;
@@ -436,7 +449,7 @@ body{
       }
       .remen_city{
         width: 100%;
-        padding: 50px 0 20px 0;
+        padding: 70px 0 30px 0;
         >ul{
           margin: 0 auto;
           width: 90%;
@@ -469,8 +482,8 @@ body{
     }
     .copy_container{
       width: 100%;
-      background: #FBF8F8;
-      line-height: 50px;
+      background: #F8F8F8;
+      line-height: 40px;
       .copy{
         margin: 0 auto;
         width: 90%;

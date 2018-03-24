@@ -27,9 +27,9 @@
        <a href="javascript:;" class="tab_city">切换城市</a>
       </span>
       <span class="nav_list">
-        <a href="javascript:;" class="on">首页</a>
+        <a href="index.html">首页</a>
         <a href="javascript:;">到位APP</a>
-        <a href="javascript:;">服务商</a>
+        <a href="javascript:;" class="on">服务商</a>
         <a href="javascript:;">商家入驻</a>
         <a href="javascript:;">风流APP</a>
         <a href="javascript:;">关于我们</a>
@@ -153,18 +153,30 @@
     <p class="copy">©2015 版权所有 到位 daoway.com 京ICP备15001471号-1 北京邻家科技有限公司</p>
   </div>
 </div>
-
+<!-- js代码 -->
 <script type="text/javascript">
   $(document).ready(function(){
+    //1、获取服务商数据
     $.get('/getService',function(data){
       $('.service_list').append(template('serverTemp',{list:data}))
     })
+
+    // 头部动画效果
+    $(window).scroll(function(){
+      if($(this).scrollTop()>= 71){
+        $('.header').addClass('topFixed').addClass('ani')
+      }else{
+        $('.header').removeClass('ani').removeClass('topFixed')
+      }
+    })
   })
 </script>
+<!-- 模板代码 -->
 <script id="serverTemp" type="text/html">
   {{each list}}
     <li class="server_item">
-      <a href="javascript:;">
+      <!-- 点击跳到详情页 -->
+      <a href="details.html">
         <img src="{{$value.imgUrl}}" alt="">
         <div class="server_name">
           <span class="iconfont icon-shouye"></span>
